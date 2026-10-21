@@ -133,6 +133,16 @@
   }, { threshold: 0.6 });
   $$('[data-count]').forEach((el) => counter.observe(el));
 
+  /* ---------- pacing: slideshows and screen recordings run 50% faster ---------- */
+  const SPEED = 1.5;
+  const SLIDE_MS = 4200 / SPEED;   // each slideshow image shows for 2.8 s
+  // Screen recordings marked data-fast play at 1.5x (Rei's talking stays at normal speed).
+  for (const v of $$('video[data-fast]')) {
+    v.defaultPlaybackRate = SPEED;
+    v.playbackRate = SPEED;
+    v.addEventListener('play', () => { v.playbackRate = SPEED; });
+  }
+
   /* ---------- videos play only while on screen ---------- */
   const videos = $$('.frame video:not(.slide)');
   const player = new IntersectionObserver((entries) => {
@@ -176,7 +186,7 @@
         s.onended = () => show((i + 1) % slides.length);
         if (user) return;
       } else {
-        timer = setTimeout(() => show((i + 1) % slides.length), 4200);
+        timer = setTimeout(() => show((i + 1) % slides.length), SLIDE_MS);
       }
     }
     new IntersectionObserver(([e]) => {

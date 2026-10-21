@@ -208,6 +208,22 @@
     });
   }
 
+  /* ---------- figure lightbox ---------- */
+  const lb = $('#lightbox');
+  for (const f of $$('.fig')) {
+    f.addEventListener('click', () => {
+      const img = $('img', lb), thumb = $('img', f);
+      img.src = f.dataset.full;
+      img.alt = thumb.alt;
+      // The report's charts are small, so cap how far they are enlarged to keep them sharp.
+      img.style.width = `${Math.min(thumb.naturalWidth * 1.8, innerWidth * 0.94, 1000)}px`;
+      $('.lb-caption', lb).textContent = f.dataset.caption;
+      lb.showModal();
+    });
+  }
+  $('.lb-close', lb).addEventListener('click', () => lb.close());
+  lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+
   /* ---------- email (assembled here to keep it away from simple scrapers) ---------- */
   const emailLink = $('#email');
   const address = `${emailLink.dataset.u}@${emailLink.dataset.d}`;

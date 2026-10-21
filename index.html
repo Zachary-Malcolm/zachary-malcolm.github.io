@@ -218,13 +218,48 @@
       <div class="wrap">
         <p class="kicker reveal">03 · Data science</p>
         <h2 class="reveal">Analysis and research.</h2>
+
+        <!-- Song success case study -->
+        <article class="study reveal">
+          <div class="study-head">
+            <p class="project-num">Case study <span class="badge proto">MSc · Data Visualisation</span></p>
+            <h3>What makes a hit? Acoustic features and song success</h3>
+            <p class="project-tag">Do songs with certain combinations of sound do better in the charts?</p>
+          </div>
+          <div class="study-cols">
+            <div>
+              <h4>Approach</h4>
+              <ul class="points">
+                <li>Cleaned and merged Spotify audio features with Billboard Hot 100 chart history (MusicOSet)</li>
+                <li>Built a composite success score from standardised chart position, peak position and weeks on the chart</li>
+                <li>Reduced ten acoustic features with PCA, then grouped songs with k-means clustering</li>
+                <li>Designed every chart for accessibility: the colour-blind-safe viridis palette, minimal styling and readable labels</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Findings</h4>
+              <ul class="points">
+                <li>The first component measures intensity (energy 0.58, loudness 0.45); the second measures mood and rhythm (danceability 0.64, valence 0.44)</li>
+                <li>The most successful songs sit at the <em>edges</em> of the acoustic space, not in the crowded middle</li>
+                <li>One cluster, high in energy and loudness, had the highest median success and the most consistent results (but no profile guarantees a hit)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="figures">
+            <button class="fig" type="button" data-full="media/song-fig1-heatmap.png" data-caption="Figure 1 · Correlation heatmap of the acoustic and chart variables"><img src="media/song-fig1-heatmap.png" alt="Correlation heatmap of the music dataset" loading="lazy"><span>Fig 1 · Correlations</span></button>
+            <button class="fig" type="button" data-full="media/song-fig2-pc1.png" data-caption="Figure 2 · Ranked PCA loadings for PC1: energy and loudness lead"><img src="media/song-fig2-pc1.png" alt="Ranked PCA loadings for principal component 1" loading="lazy"><span>Fig 2 · PC1 loadings</span></button>
+            <button class="fig" type="button" data-full="media/song-fig3-pc2.png" data-caption="Figure 3 · Ranked PCA loadings for PC2: danceability and valence lead"><img src="media/song-fig3-pc2.png" alt="Ranked PCA loadings for principal component 2" loading="lazy"><span>Fig 3 · PC2 loadings</span></button>
+            <button class="fig" type="button" data-full="media/song-fig4-hexbin.jpg" data-caption="Figure 4 · Mean composite success across the PCA space: the brightest hexagons sit at the edges"><img src="media/song-fig4-hexbin.jpg" alt="Hexbin plot of mean song success across the two principal components" loading="lazy"><span>Fig 4 · Success map</span></button>
+            <button class="fig" type="button" data-full="media/song-fig5-clusters.jpg" data-caption="Figure 5 · k-means clusters (k = 3) in PCA space, with centroids marked"><img src="media/song-fig5-clusters.jpg" alt="Scatter plot of songs in three k-means clusters with centroids" loading="lazy"><span>Fig 5 · Clusters</span></button>
+            <button class="fig" type="button" data-full="media/song-fig6-boxplot.png" data-caption="Figure 6 · Distribution of song success by cluster: cluster 3 has the highest median"><img src="media/song-fig6-boxplot.png" alt="Boxplot of song success for each cluster" loading="lazy"><span>Fig 6 · Success by cluster</span></button>
+          </div>
+          <ul class="chips"><li>R</li><li>tidyverse</li><li>ggplot2</li><li>PCA</li><li>k-means</li><li>hexbin</li><li>viridis</li></ul>
+          <div class="links">
+            <a class="btn small" href="https://github.com/Zachary-Malcolm/IJC437-project---Can-Acoustic-Features-be-used-to-Predict-Song-Success-" target="_blank" rel="noopener">Related analysis code (R) ↗</a>
+          </div>
+        </article>
+
         <div class="ds-grid">
-          <a class="ds-card reveal" href="https://github.com/Zachary-Malcolm/IJC437-project---Can-Acoustic-Features-be-used-to-Predict-Song-Success-" target="_blank" rel="noopener">
-            <span class="ds-lang">R</span>
-            <h3>Can acoustic features predict a hit?</h3>
-            <p>Tested whether a song's sonic profile (tempo, energy, danceability and more) predicts its chart success, using public Spotify data.</p>
-            <span class="ds-more">View code ↗</span>
-          </a>
           <div class="ds-card reveal">
             <span class="ds-lang">ML</span>
             <h3>Epigenetics and machine learning</h3>
@@ -327,6 +362,12 @@
       </div>
     </section>
   </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Enlarged figure">
+    <button class="lb-close" type="button" aria-label="Close">×</button>
+    <img alt="">
+    <p class="lb-caption"></p>
+  </dialog>
 
   <footer class="footer">
     <p>© <span id="year">2026</span> Zachary Malcolm · Built with HTML, CSS and JavaScript · Hosted on GitHub Pages</p>

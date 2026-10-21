@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zachary Malcolm · Data Science &amp; AI Projects</title>
+  <meta name="description" content="Zachary Malcolm: Data Science MSc student at the University of Sheffield. Local AI apps, data products and interactive visualisations.">
+  <meta property="og:title" content="Zachary Malcolm · Data Science & AI Projects">
+  <meta property="og:description" content="Data Science MSc (Sheffield). Local AI apps, data products and interactive visualisations.">
+  <meta property="og:image" content="https://zachary-malcolm.github.io/media/orbitwatch-hero.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#07080c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307080c'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' text-anchor='middle' fill='%238ab4ff'%3EZM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">ZM</span><span class="brand-name">Zachary Malcolm</span></a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="sky" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="eyebrow reveal">Data Science MSc · University of Sheffield</p>
+        <h1 class="reveal">Hi, I'm <span class="grad">Zachary Malcolm</span>.</h1>
+        <p class="role reveal">I build <span id="typed" class="typed">local AI apps</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="lead reveal">Data scientist with a background in business. I turn data and AI into products people can actually use, from a live 3D satellite tracker to a private AI lab that runs entirely on my own PC.</p>
+        <div class="hero-actions reveal">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="https://github.com/Zachary-Malcolm" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <ul class="hero-stats reveal" aria-label="Highlights">
+          <li><strong data-count="16000" data-suffix="+">16,000+</strong><span>satellites tracked live</span></li>
+          <li><strong data-count="87">87</strong><span>Python lessons written</span></li>
+          <li><strong data-count="100" data-suffix="%">100%</strong><span>offline AI lab</span></li>
+        </ul>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap about">
+        <div class="about-text">
+          <p class="kicker reveal">01 · About</p>
+          <h2 class="reveal">Data, AI and a bit of design.</h2>
+          <p class="reveal">I'm a Data Science Master's student at the University of Sheffield, with a 2:1 in Business Management from the same university. That mix means I care about two things: getting the analysis right, and making it useful to the people who need it.</p>
+          <p class="reveal">Outside my course I build things. I run large language models locally, I've made a learning app that checks every one of its own answers in real Python, and I like turning complex data, like the orbit of every satellite or the notes in a song, into something you can see.</p>
+        </div>
+        <ul class="about-cards">
+          <li class="card reveal"><span class="card-icon" aria-hidden="true">◎</span><h3>Analysis</h3><p>Python, R and SQL. Regression, SVMs, XGBoost and honest statistics.</p></li>
+          <li class="card reveal"><span class="card-icon" aria-hidden="true">✦</span><h3>AI</h3><p>Local LLMs, retrieval (RAG), agents with approvals and LoRA fine-tuning.</p></li>
+          <li class="card reveal"><span class="card-icon" aria-hidden="true">▲</span><h3>Products</h3><p>Interactive web and desktop apps, built to be clear, quick and enjoyable.</p></li>
+          <li class="card reveal"><span class="card-icon" aria-hidden="true">£</span><h3>Business</h3><p>Accounting, finance and decision-making, from my Business Management degree.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <p class="kicker reveal">02 · Projects</p>
+        <h2 class="reveal">Things I've built.</h2>
+        <p class="section-lead reveal">Every clip below is the real app, recorded as it runs.</p>
+
+        <!-- OrbitWatch -->
+        <article class="project reveal">
+          <div class="project-media">
+            <div class="frame">
+              <div class="frame-bar"><i></i><i></i><i></i><span>zachary-malcolm.github.io/orbitwatch</span></div>
+              <img src="media/orbitwatch-flyin.gif" alt="OrbitWatch flying in towards a satellite on the amber 3D globe" loading="lazy" width="1280" height="720">
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-num">01 <span class="badge live">Live</span></p>
+            <h3>OrbitWatch</h3>
+            <p class="project-tag">Every active satellite in orbit, live in 3D.</p>
+            <p>A real-time globe of around 16,000 satellites and 2,700 debris fragments, styled as a 1980s amber surveillance terminal. Positions come from real orbital mechanics (SGP4), and it screens every pair of objects for close approaches in the background.</p>
+            <ul class="points">
+              <li>Close-approach screening across millions of pairs, using parallel web workers</li>
+              <li>Ground tracks, coverage footprints and pass predictions for any satellite</li>
+              <li>Unit-tested maths with continuous integration, and data refreshed every 3 hours</li>
+            </ul>
+            <ul class="chips"><li>TypeScript</li><li>Three.js</li><li>SGP4</li><li>Web Workers</li><li>Vitest</li><li>GitHub Actions</li></ul>
+            <div class="links">
+              <a class="btn primary small" href="https://zachary-malcolm.github.io/orbitwatch/" target="_blank" rel="noopener">Open live app ↗</a>
+              <a class="btn small" href="https://github.com/Zachary-Malcolm/orbitwatch" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Increment -->
+        <article class="project flip reveal">
+          <div class="project-media">
+            <div class="frame">
+              <div class="frame-bar"><i></i><i></i><i></i><span>zachary-malcolm.github.io/increment</span></div>
+              <video src="media/increment.mp4" poster="media/increment-poster.jpg" muted loop playsinline preload="none" aria-label="Scrolling through Increment's home page, course list, a lesson and the puzzles page"></video>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-num">02 <span class="badge live">Live</span></p>
+            <h3>Increment</h3>
+            <p class="project-tag">Learn Python for data science, one small step a day.</p>
+            <p>A Duolingo-style course for people who find coding daunting: 17 modules and 87 lessons, from a first <code>print()</code> to machine learning, with real Python running in the browser and real datasets throughout.</p>
+            <ul class="points">
+              <li>286 exercises, each automatically checked in real Python before it can be published</li>
+              <li>Spaced repetition (FSRS, as used by Anki) and daily bug-hunt puzzles with an Elo rating</li>
+              <li>Streaks, XP and optional accounts so progress follows you between devices</li>
+            </ul>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>Pyodide</li><li>pandas</li><li>scikit-learn</li><li>Supabase</li></ul>
+            <div class="links">
+              <a class="btn primary small" href="https://zachary-malcolm.github.io/increment/" target="_blank" rel="noopener">Try it ↗</a>
+              <a class="btn small" href="https://github.com/Zachary-Malcolm/increment" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Vega -->
+        <article class="project reveal">
+          <div class="project-media">
+            <div class="frame gallery" data-gallery>
+              <div class="frame-bar"><i></i><i></i><i></i><span>Vega · desktop app</span></div>
+              <div class="slides">
+                <video class="slide active" src="media/vega-station.mp4" poster="media/vega-station-poster.jpg" muted playsinline preload="none" aria-label="Vega's animated space station: astronauts carry out a research task step by step"></video>
+                <img class="slide" src="media/vega-lab.jpg" alt="Vega's Lab page: benchmark sets and models to test" loading="lazy">
+                <img class="slide" src="media/vega-chat.jpg" alt="Vega's chat screen: everything runs on this PC" loading="lazy">
+                <img class="slide" src="media/vega-personas.jpg" alt="Vega's Personas page" loading="lazy">
+              </div>
+              <div class="dots" role="tablist" aria-label="Vega screens"></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-num">03 <span class="badge private">Private · runs offline</span></p>
+            <h3>Vega</h3>
+            <p class="project-tag">A private AI lab that runs entirely on my PC.</p>
+            <p>A desktop workspace for chatting with, testing and comparing local language models, with no cloud services involved. Agents can use tools, but only after I approve each step, and every network request is logged.</p>
+            <ul class="points">
+              <li>Deep Research pipeline, shown as an animated space station crew at work</li>
+              <li>Blind model comparisons with an Elo leaderboard, automatic benchmarks and an AI council that debates and votes</li>
+              <li>Long-term memory and document search with local embeddings (RAG), plus a LoRA fine-tuning proof of concept</li>
+            </ul>
+            <ul class="chips"><li>Electron</li><li>React</li><li>TypeScript</li><li>Ollama</li><li>RAG</li><li>PyTorch · PEFT</li></ul>
+            <div class="links"><span class="note">Code is private, so screens and a recording are shown instead.</span></div>
+          </div>
+        </article>
+
+        <!-- Beat Visualizer -->
+        <article class="project flip reveal">
+          <div class="project-media">
+            <div class="frame">
+              <div class="frame-bar"><i></i><i></i><i></i><span>Beat Visualizer · prototype</span></div>
+              <video src="media/beatviz.mp4" poster="media/beatviz-poster.jpg" muted loop playsinline preload="none" aria-label="Beat Visualizer playing a demo beat: melody notes become stars and bass notes glowing clouds"></video>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-num">04 <span class="badge proto">Prototype</span></p>
+            <h3>Beat Visualizer</h3>
+            <p class="project-tag">Turns a beat into a night sky, note by note.</p>
+            <p>Drop in a beat or its stems and every melody note becomes a star, every bass note a cloud, and the drums drive the sky. Made for music producers who would otherwise post screen recordings of their software.</p>
+            <ul class="points">
+              <li>Pitch tracking (YIN), drum onset detection, tempo and key detection, all in the browser</li>
+              <li>Detected all 76 melody notes and 45 bass notes on its test beat</li>
+              <li>Colour palette picked from the beat's mood, with vertical video export for Reels and TikTok</li>
+            </ul>
+            <ul class="chips"><li>JavaScript</li><li>Web Audio</li><li>Signal processing</li><li>Canvas</li></ul>
+            <div class="links"><span class="note">Work in progress.</span></div>
+          </div>
+        </article>
+
+        <!-- Rei -->
+        <article class="project reveal">
+          <div class="project-media">
+            <div class="frame rei">
+              <div class="frame-bar"><i></i><i></i><i></i><span>Rei · voice companion</span></div>
+              <div class="rei-stage">
+                <video src="media/rei.mp4" muted loop playsinline preload="none" aria-label="Rei's 3D avatar talking, blinking and changing mood"></video>
+                <ul class="rei-flow" aria-label="How Rei works">
+                  <li>Your voice</li><li>Speech to text</li><li>Local LLM</li><li>Her voice + 3D avatar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-num">05 <span class="badge private">Private · runs offline</span></p>
+            <h3>Rei</h3>
+            <p class="project-tag">A voice assistant with a personality, and no cloud.</p>
+            <p>A fully local AI companion you can talk to: speech recognition, a choice of local language models as her "brain", her own synthesised voice and a 3D avatar. She remembers past conversations in a notes vault and can only use skills she's been given permission for.</p>
+            <ul class="points">
+              <li>Everything runs on the PC; it still works with the internet switched off</li>
+              <li>Switchable model "brains", long-term memory and a permission system for skills</li>
+            </ul>
+            <ul class="chips"><li>Python</li><li>Ollama</li><li>Speech-to-text</li><li>GPT-SoVITS</li><li>Three.js · VRM</li></ul>
+            <div class="links"><span class="note">Code is private to protect personal data.</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- DATA SCIENCE -->
+    <section id="data" class="section">
+      <div class="wrap">
+        <p class="kicker reveal">03 · Data science</p>
+        <h2 class="reveal">Analysis and research.</h2>
+        <div class="ds-grid">
+          <a class="ds-card reveal" href="https://github.com/Zachary-Malcolm/IJC437-project---Can-Acoustic-Features-be-used-to-Predict-Song-Success-" target="_blank" rel="noopener">
+            <span class="ds-lang">R</span>
+            <h3>Can acoustic features predict a hit?</h3>
+            <p>Tested whether a song's sonic profile (tempo, energy, danceability and more) predicts its chart success, using public Spotify data.</p>
+            <span class="ds-more">View code ↗</span>
+          </a>
+          <div class="ds-card reveal">
+            <span class="ds-lang">ML</span>
+            <h3>Epigenetics and machine learning</h3>
+            <p>Applied regression, support vector machines and XGBoost to the GSE315764 epigenetics dataset.</p>
+            <span class="ds-more muted">MSc coursework</span>
+          </div>
+          <div class="ds-card reveal">
+            <span class="ds-lang">Big data</span>
+            <h3>Distributed processing</h3>
+            <p>Used Apache Spark on AWS for large-scale data processing, analysis and distributed computing.</p>
+            <span class="ds-more muted">MSc coursework</span>
+          </div>
+          <div class="ds-card reveal">
+            <span class="ds-lang">LLMs</span>
+            <h3>Running models locally</h3>
+            <p>Deployed and prompted open models such as DeepSeek R1 and Qwen3-Coder, and built benchmarks to compare them fairly.</p>
+            <span class="ds-more muted">Ongoing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <p class="kicker reveal">04 · Skills</p>
+        <h2 class="reveal">Tools I work with.</h2>
+        <div class="skills">
+          <div class="skill-group reveal"><h3>Languages</h3><ul class="chips big"><li>Python</li><li>R</li><li>SQL</li><li>TypeScript</li><li>JavaScript</li><li>HTML &amp; CSS</li></ul></div>
+          <div class="skill-group reveal"><h3>Data &amp; ML</h3><ul class="chips big"><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>XGBoost</li><li>ggplot2</li><li>matplotlib</li><li>Jupyter</li><li>Apache Spark</li><li>AWS</li><li>Excel</li></ul></div>
+          <div class="skill-group reveal"><h3>AI</h3><ul class="chips big"><li>Local LLMs (Ollama)</li><li>Prompting</li><li>RAG &amp; embeddings</li><li>Agents &amp; tool calling</li><li>LoRA fine-tuning</li></ul></div>
+          <div class="skill-group reveal"><h3>Apps &amp; tools</h3><ul class="chips big"><li>React</li><li>Three.js</li><li>Electron</li><li>Git &amp; GitHub</li><li>CI with GitHub Actions</li></ul></div>
+          <div class="skill-group reveal"><h3>People</h3><ul class="chips big"><li>Teamwork</li><li>Problem solving</li><li>Clear communication</li><li>Growth mindset</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & EXPERIENCE -->
+    <section id="education" class="section">
+      <div class="wrap two-col">
+        <div>
+          <p class="kicker reveal">05 · Education</p>
+          <h2 class="reveal">Qualifications.</h2>
+          <ol class="timeline">
+            <li class="reveal">
+              <span class="when">2025 – 2026</span>
+              <h3>MSc Data Science</h3>
+              <p class="where">University of Sheffield</p>
+              <p>Modules include Data Mining and AI, and Data Visualisation.</p>
+            </li>
+            <li class="reveal">
+              <span class="when">2022 – 2025</span>
+              <h3>BA Business Management <span class="grade">2:1</span></h3>
+              <p class="where">University of Sheffield</p>
+              <p>Analysis for Decision Making, Accounting and Finance, Business Economics.</p>
+            </li>
+            <li class="reveal">
+              <span class="when">A Levels</span>
+              <h3>Geography A · Biology B · English Literature B</h3>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <p class="kicker reveal">06 · Experience</p>
+          <h2 class="reveal">Work.</h2>
+          <ol class="timeline">
+            <li class="reveal">
+              <span class="when">Jun 2023 – Sep 2024</span>
+              <h3>Radiology Patient Pathway Support</h3>
+              <p class="where">NHS</p>
+              <p>Data entry in Excel, administration, patient reception and pathway management.</p>
+            </li>
+            <li class="reveal">
+              <span class="when">Aug 2022</span>
+              <h3>Accounting Assistant</h3>
+              <p class="where">Gabriel's Care &amp; Nursing Agency</p>
+            </li>
+            <li class="reveal">
+              <span class="when">Ongoing</span>
+              <h3>Learning</h3>
+              <p>DataCamp's Python for Data Science course, and SQL practice on Coddy.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="wrap">
+        <p class="kicker reveal">07 · Contact</p>
+        <h2 class="reveal">Let's talk.</h2>
+        <p class="section-lead reveal">I'm looking for roles in data science and analytics. If you'd like to chat or see my CV, email me.</p>
+        <div class="contact-actions reveal">
+          <a class="btn primary big" id="email" href="#contact" data-u="zacharymalcolm765" data-d="gmail.com">Email me</a>
+          <button class="btn big" id="copy" type="button">Copy email address</button>
+          <a class="btn big" href="https://github.com/Zachary-Malcolm" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <p class="copied" id="copied" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Zachary Malcolm · Built with HTML, CSS and JavaScript · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

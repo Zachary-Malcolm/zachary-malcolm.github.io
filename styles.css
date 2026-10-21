@@ -202,6 +202,8 @@ code { font-family: var(--mono); font-size: 0.88em; background: var(--surface-2)
 /* Rei is shown full length, so her window is tall and narrow */
 .frame.portrait { max-width: 380px; margin: 0 auto; }
 .frame.portrait video { aspect-ratio: 2 / 3; object-position: center; }
+.frame.portrait.phone { max-width: 340px; }
+.frame.portrait.phone video { aspect-ratio: 390 / 844; }
 .rei-flow {
   list-style: none; margin: 0; padding: 12px; border-top: 1px solid var(--line); background: #0c0f16;
   display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;

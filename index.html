@@ -78,10 +78,43 @@
       <div class="wrap">
         <p class="kicker reveal">02 · Projects</p>
         <h2 class="reveal">Things I've built.</h2>
-        <p class="section-lead reveal">Every clip below is the real app, recorded as it runs.</p>
+        <p class="section-lead reveal">Real research and real apps: every clip below is recorded as the app runs.</p>
+
+        <!-- Dissertation -->
+        <article class="project reveal">
+          <div class="project-media">
+            <div class="frame gallery" data-gallery>
+              <div class="frame-bar"><i></i><i></i><i></i><span>MSc dissertation · results</span></div>
+              <div class="slides light">
+                <img class="slide active" src="media/diss-confound.png" alt="Bar chart: every model's test ROC-AUC falls towards chance once the platform confound is removed" loading="lazy">
+                <img class="slide" src="media/diss-roc.png" alt="ROC curves for the four tuned models on the held-out test set" loading="lazy">
+                <img class="slide" src="media/diss-confusion.png" alt="Confusion matrices for the four tuned models" loading="lazy">
+                <img class="slide" src="media/diss-recall.png" alt="Bar chart: overall accuracy compared with low-risk recall for each model" loading="lazy">
+                <img class="slide dark" src="media/diss-pipeline.png" alt="Flow diagram of the analysis pipeline, from data acquisition to evaluation" loading="lazy">
+              </div>
+              <div class="dots" role="tablist" aria-label="Dissertation figures"></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <p class="project-num">01 <span class="badge proto">MSc dissertation</span></p>
+            <h3>Prediabetes risk from DNA methylation</h3>
+            <p class="project-tag">Spotting the confound that made the models look good.</p>
+            <p>I compared Logistic Regression, Random Forest, SVM and XGBoost for predicting prediabetes risk from blood DNA methylation at nearly 200,000 sites. While exploring the data I found that the chip version predicted the outcome perfectly. With that confound removed, the "promising" results disappeared.</p>
+            <ul class="points">
+              <li>Mean test ROC-AUC fell from 0.755 to 0.605 once the platform confound was removed, close to chance</li>
+              <li>Leakage-safe pipelines: scaling and LASSO + Random Forest feature selection refitted inside every cross-validation fold</li>
+              <li>Evaluated beyond accuracy: one model scored 71% accuracy while missing every low-risk person in the test set</li>
+            </ul>
+            <ul class="chips"><li>Python</li><li>scikit-learn</li><li>XGBoost</li><li>pandas</li><li>LASSO</li><li>GEO data</li></ul>
+            <div class="links">
+              <a class="btn primary small" href="https://github.com/Zachary-Malcolm/prediabetes-methylation-ml/blob/main/docs/dissertation.pdf" target="_blank" rel="noopener">Read the dissertation ↗</a>
+              <a class="btn small" href="https://github.com/Zachary-Malcolm/prediabetes-methylation-ml" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
 
         <!-- OrbitWatch -->
-        <article class="project reveal">
+        <article class="project flip reveal">
           <div class="project-media">
             <div class="frame">
               <div class="frame-bar"><i></i><i></i><i></i><span>zachary-malcolm.github.io/orbitwatch</span></div>
@@ -89,7 +122,7 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-num">01 <span class="badge live">Live</span></p>
+            <p class="project-num">02 <span class="badge live">Live</span></p>
             <h3>OrbitWatch</h3>
             <p class="project-tag">Every active satellite in orbit, live in 3D.</p>
             <p>A real-time globe of around 16,000 satellites and 2,700 debris fragments, styled as a 1980s amber surveillance terminal. Positions come from real orbital mechanics (SGP4), and it screens every pair of objects for close approaches in the background.</p>
@@ -107,7 +140,7 @@
         </article>
 
         <!-- Increment -->
-        <article class="project flip reveal">
+        <article class="project reveal">
           <div class="project-media">
             <div class="frame">
               <div class="frame-bar"><i></i><i></i><i></i><span>zachary-malcolm.github.io/increment</span></div>
@@ -115,7 +148,7 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-num">02 <span class="badge live">Live</span></p>
+            <p class="project-num">03 <span class="badge live">Live</span></p>
             <h3>Increment</h3>
             <p class="project-tag">Learn Python for data science, one small step a day.</p>
             <p>A Duolingo-style course for people who find coding daunting: 17 modules and 87 lessons, from a first <code>print()</code> to machine learning, with real Python running in the browser and real datasets throughout.</p>
@@ -133,7 +166,7 @@
         </article>
 
         <!-- Vega -->
-        <article class="project reveal">
+        <article class="project flip reveal">
           <div class="project-media">
             <div class="frame gallery" data-gallery>
               <div class="frame-bar"><i></i><i></i><i></i><span>Vega · desktop app</span></div>
@@ -147,7 +180,7 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-num">03 <span class="badge private">Private · runs offline</span></p>
+            <p class="project-num">04 <span class="badge private">Private · runs offline</span></p>
             <h3>Vega</h3>
             <p class="project-tag">A private AI lab that runs entirely on my PC.</p>
             <p>A desktop workspace for chatting with, testing and comparing local language models, with no cloud services involved. Agents can use tools, but only after I approve each step, and every network request is logged.</p>
@@ -162,7 +195,7 @@
         </article>
 
         <!-- Beat Visualizer -->
-        <article class="project flip reveal">
+        <article class="project reveal">
           <div class="project-media">
             <div class="frame">
               <div class="frame-bar"><i></i><i></i><i></i><span>Beat Visualizer · prototype</span></div>
@@ -170,7 +203,7 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-num">04 <span class="badge proto">Prototype</span></p>
+            <p class="project-num">05 <span class="badge proto">Prototype</span></p>
             <h3>Beat Visualizer</h3>
             <p class="project-tag">Turns a beat into a night sky, note by note.</p>
             <p>Drop in a beat or its stems and every melody note becomes a star, every bass note a cloud, and the drums drive the sky. Made for music producers who would otherwise post screen recordings of their software.</p>
@@ -185,7 +218,7 @@
         </article>
 
         <!-- Rei -->
-        <article class="project reveal">
+        <article class="project flip reveal">
           <div class="project-media">
             <div class="frame rei">
               <div class="frame-bar"><i></i><i></i><i></i><span>Rei · voice companion</span></div>
@@ -198,7 +231,7 @@
             </div>
           </div>
           <div class="project-body">
-            <p class="project-num">05 <span class="badge private">Private · runs offline</span></p>
+            <p class="project-num">06 <span class="badge private">Private · runs offline</span></p>
             <h3>Rei</h3>
             <p class="project-tag">A voice assistant with a personality, and no cloud.</p>
             <p>A fully local AI companion you can talk to: speech recognition, a choice of local language models as her "brain", her own synthesised voice and a 3D avatar. She remembers past conversations in a notes vault and can only use skills she's been given permission for.</p>
@@ -260,12 +293,6 @@
         </article>
 
         <div class="ds-grid">
-          <div class="ds-card reveal">
-            <span class="ds-lang">ML</span>
-            <h3>Epigenetics and machine learning</h3>
-            <p>Applied regression, support vector machines and XGBoost to the GSE315764 epigenetics dataset.</p>
-            <span class="ds-more muted">MSc coursework</span>
-          </div>
           <div class="ds-card reveal">
             <span class="ds-lang">Big data</span>
             <h3>Distributed processing</h3>

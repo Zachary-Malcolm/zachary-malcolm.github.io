@@ -190,6 +190,9 @@ code { font-family: var(--mono); font-size: 0.88em; background: var(--surface-2)
 .slides { position: relative; aspect-ratio: 16 / 10.4; background: #0a0c12; }
 .slides .slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top left; opacity: 0; transition: opacity 0.8s ease; }
 .slides .slide.active { opacity: 1; }
+.slides.light { background: #fff; }
+.slides.light .slide { object-fit: contain; object-position: center; padding: 14px 14px 34px; }
+.slides.light .slide.dark { background: #262626; padding: 10px 10px 34px; }
 .dots { position: absolute; bottom: 12px; left: 50%; translate: -50% 0; display: flex; gap: 6px; padding: 6px 8px; border-radius: 999px; background: rgba(7, 8, 12, 0.7); backdrop-filter: blur(6px); }
 .dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: width 0.3s var(--ease), background 0.3s; }
 .dots button[aria-selected="true"] { width: 22px; background: var(--accent); }
@@ -248,7 +251,7 @@ code { font-family: var(--mono); font-size: 0.88em; background: var(--surface-2)
 }
 
 /* data science */
-.ds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.ds-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
 .ds-card {
   position: relative; display: flex; flex-direction: column; padding: 24px; border-radius: var(--radius);
   background: var(--surface); border: 1px solid var(--line); overflow: hidden;

@@ -136,11 +136,13 @@
   /* ---------- pacing: slideshows and screen recordings run 50% faster ---------- */
   const SPEED = 1.5;
   const SLIDE_MS = 4200 / SPEED;   // each slideshow image shows for 2.8 s
-  // Screen recordings marked data-fast play at 1.5x (Rei's talking stays at normal speed).
+  // Screen recordings marked data-fast play at 1.5x, or at their own data-speed if set
+  // (Rei's talking stays at normal speed).
   for (const v of $$('video[data-fast]')) {
-    v.defaultPlaybackRate = SPEED;
-    v.playbackRate = SPEED;
-    v.addEventListener('play', () => { v.playbackRate = SPEED; });
+    const rate = Number(v.dataset.speed) || SPEED;
+    v.defaultPlaybackRate = rate;
+    v.playbackRate = rate;
+    v.addEventListener('play', () => { v.playbackRate = rate; });
   }
 
   /* ---------- videos play only while on screen ---------- */

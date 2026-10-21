@@ -199,11 +199,14 @@ code { font-family: var(--mono); font-size: 0.88em; background: var(--surface-2)
 
 /* rei */
 .rei-stage { position: relative; background: #1b1524; }
+/* Rei is shown full length, so her window is tall and narrow */
+.frame.portrait { max-width: 380px; margin: 0 auto; }
+.frame.portrait video { aspect-ratio: 2 / 3; object-position: center; }
 .rei-flow {
-  position: absolute; left: 0; right: 0; bottom: 14px; list-style: none; padding: 0 12px; margin: 0;
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; pointer-events: none;
+  list-style: none; margin: 0; padding: 12px; border-top: 1px solid var(--line); background: #0c0f16;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;
 }
-.rei-flow li { font: 11px/1 var(--mono); color: #d9d1ff; padding: 6px 9px; border-radius: 6px; border: 1px solid rgba(203, 184, 224, 0.25); background: rgba(15, 12, 20, 0.78); backdrop-filter: blur(4px); }
+.rei-flow li { font: 11px/1 var(--mono); color: #d9d1ff; padding: 6px 9px; border-radius: 6px; border: 1px solid rgba(203, 184, 224, 0.25); background: rgba(27, 21, 36, 0.9); }
 .rei-flow li:not(:last-child)::after { content: '→'; margin-left: 9px; color: var(--faint); }
 
 /* song success case study */

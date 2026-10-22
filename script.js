@@ -153,9 +153,9 @@
       if (e.isIntersecting && !v.dataset.paused) v.play().catch(() => {});
       else v.pause();
     }
-  }, { threshold: 0.35 });
+  }, { threshold: 0.2 });   // start as soon as a fifth of the clip is on screen
   for (const v of videos) {
-    v.preload = 'metadata';
+    v.preload = v.hasAttribute('data-eager') ? 'auto' : 'metadata';   // eager clips download as the page opens
     player.observe(v);
     v.addEventListener('click', () => {
       if (v.paused) { delete v.dataset.paused; v.play(); } else { v.dataset.paused = '1'; v.pause(); }
